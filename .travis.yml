@@ -10,3 +10,14 @@ install:
 script:
   - npm test --prefix client
   - npm run client-build
+
+branches:
+  only:
+    - master
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: 719fd4af-bb32-4c41-bb08-e4696b1e7ea6
+  app:
+    master: snakeout-stage
