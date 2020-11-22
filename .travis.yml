@@ -2,7 +2,11 @@ language: node_js
 
 node_js:
   - "12"
+cache: npm
+install:
+  - npm install
+  - npm install --prefix client
 
 script:
-  - npm test
-  - npm run build
+  - npm test --prefix client
+  - npm run client-build
