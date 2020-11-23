@@ -1,22 +1,19 @@
 language: node_js
-
 node_js:
-  - "12"
+- '12'
 cache: npm
 install:
-  - npm install
-  - npm install --prefix client
-
+- npm install
+- npm install --prefix client
 script:
-  - npm test --prefix client
-  - npm run client-build
-
+- npm test --prefix client
+- npm run client-build
 branches:
   only:
-    - master
-
+  - master
 deploy:
   provider: heroku
-  api_key: 719fd4af-bb32-4c41-bb08-e4696b1e7ea6
+  api_key:
+    secure: JQ2TttgyYsBUhTMtzWiQeRnNBeMRKnhoRBPpABN2CDAk8htyfvfitR3wPkRJBKCXkUbJy5MUqzoD4ZdQdY2IAvLJHnbL+eDoXxMYjO59kFNBSMKKHhCoRNBrLlthOiwrz8N/HPTaSD3ZVLD48Sc8hUe+S0DevjSqZyGbX9NcYwzZzfFatTl5m/+YzHe/kgmFdvFda/ijsnhDqgt5wIEdEnigMhAbs1gN5FaF4e8YXFGINZXB/9uv1kGt1er1a2qxGMt1iczauZAIJ4pC23gv9dh8L+r/OBlcMaFxWpCj+RnERdo6P130vGruC8xICYbXWMWvhxyPX6ofsbOc6Wa1g13CszbSsRyt5esOM77nSdwpiZXfnKzRbqFySygh9BJkQuqJ/saw4apy/cPj2JVJ+Rck8xj8gV69+pzzx8+gg8AH8LBp5ayFoZRNnGtDJNXZtbT2XfnMXwcu936IAbzm5ScKaTRC2ZCE6AZT1mCOLnMIpyUoMZr7ejG8YMzcuLZ+GKXbly3Ka6akcXgJFzFUhQ+pHEU1hp84H5MybrbRsJKd0yAaPQaRTEgSBNFB2REykZ8vuo5cQisJMoaXC9uEQdwQhlXx9UeTCh/qvTDBfvGZz0B6Tedg3Bd7mQcWoUlWyXyOXipSWSKsboApAi1wGIpJj+W6PEL4nHdsYxMokX0=
   app:
     master: snakeout-stage
